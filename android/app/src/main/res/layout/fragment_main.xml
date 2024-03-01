@@ -6,15 +6,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment">
-
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MainFragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/start_record"
+        android:text="开始录音"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/stop_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="结束录音"
+        app:layout_constraintTop_toBottomOf="@+id/start_record" />
+    <Button
+        android:id="@+id/start_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="播放录音"
+        app:layout_constraintTop_toBottomOf="@+id/stop_record" />
+    <Button
+        android:id="@+id/stop_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止播放"
+        app:layout_constraintTop_toBottomOf="@+id/start_play" />
+    <ProgressBar
+        android:id="@+id/play_process"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        app:layout_constraintTop_toBottomOf="@id/stop_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
